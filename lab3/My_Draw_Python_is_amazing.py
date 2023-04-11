@@ -4,18 +4,17 @@ from pygame.draw import *
 pygame.init()
 
 FPS = 30
-screen = pygame.display.set_mode((400, 400))
-
+screen = pygame.display.set_mode((927, 769))
 
 def draw_body(surface, x, y, width, height, color):
     '''
-    Рисует тело зайца.
+    Рисует тело человечка.
     surface - объект pygame.Surface
     x, y - координаты центра изображения
     width, height - ширина и высота изобажения
     color - цвет, заданный в формате, подходящем для pygame.Color
     '''
-    ellipse(surface, color, (x - width // 2, y - height // 2, width, height))
+    circle(surface, color, (x - width // 2, y - height // 2, width, height))
 def draw_head(surface, x, y, size, color):
     '''
     Рисует голову зайца.
@@ -72,7 +71,8 @@ def draw_hare(surface, x, y, width, height, color):
 
 
 
-draw_hare(screen, 200, 200, 200, 400, (200, 200, 200))
+draw_picture(screen, 200, 200, 200, 400, (200, 200, 200))
+
 pygame.display.update()
 clock = pygame.time.Clock()
 finished = False
